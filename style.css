@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+:root {
+    --soft-blue: hsl(215, 51%, 70%);
+    --cyan: hsl(178, 100%, 50%);
+    --very-dark-blue-main-bg: hsl(217, 54%, 11%);
+    --very-dark-blue-card-bg: hsl(216, 50%, 16%);
+    --very-dark-blue-line: hsl(215, 32%, 27%);
+    --white: hsl(0, 0%, 100%);
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--very-dark-blue-main-bg);
+    font-family: 'Outfit', sans-serif;
+    font-size: 18px;
+    color: white;
+}
+
+.card {
+    width: 330px;
+    height: 546px;
+    background-color: var(--very-dark-blue-card-bg);
+    margin: 60px auto;
+    border-radius: 16px;
+    padding: 24px;
+}
+
+.image {
+    background-image: url(./images/image-equilibrium.jpg);
+    background-size: cover;
+    width: 280px;
+    height: 280px;
+    border-radius: 8px;
+    margin-bottom: 26px;
+    overflow: hidden;
+}
+
+.overlay {
+    background-color: hsl(178, 100%, 50%, 0.5);
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+
+.image:hover .overlay {
+    background-image: url(./images/icon-view.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    opacity: 1;
+}
+
+h1 {
+    font-size: 1.3em;
+    margin-bottom: 18px;
+}
+
+h1:hover {
+    color: var(--cyan);
+    cursor: pointer;
+}
+
+p {
+    color: var(--soft-blue);
+    font-weight: 300;
+    line-height: 1.5;
+    font-size: 0.9em;
+    margin-bottom: 20px;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 0.9em;
+}
+
+.eth {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: var(--cyan);
+}
+
+.days {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.line {
+    border-top: 1px solid var(--very-dark-blue-line);
+    margin-bottom: 10px;
+}
+
+.creator {
+    display: flex;
+    align-items: center;
+}
+
+.photo {
+    background-image: url(./images/image-avatar.png);
+    background-size: cover;
+    width: 30px;
+    height: 30px;
+    border: 1px solid white;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.name {
+    color: var(--soft-blue);
+    margin: 0;
+    font-weight: 300;
+}
+
+.creator-name {
+    color: white;
+    margin: 0;
+    font-weight: 400;
+}
+
+.creator-name:hover {
+    color: var(--cyan);
+    cursor: pointer;
+}
+
+@media (min-width: 900px) {
+
+    .card {
+        width: 354px;
+        height: 600px;
+    }
+
+    .image {
+        width: 300px;
+        height: 300px;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    .creator {
+        margin-top: 20px;
+    }
+}
+
+
